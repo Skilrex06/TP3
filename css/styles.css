@@ -1,0 +1,63 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Styles d'entête */
+header {
+    background-color: black;
+    padding: 1px;
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+}
+header nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    color: aqua;
+}
+header nav ul a {
+    margin: 3px 26px;
+    font-size: 1.5rem;
+    color: red;
+}
+/* Styles de pied de page */
+footer {
+    background-color: black;
+    padding: 1px;
+}
+/* Styles de corps */
+body {
+    margin: 0;
+    font-size: 1.2rem;
+}
+body section {
+    background-color: cadetblue;
+}
+a {
+    text-decoration: none;
+}
+/* Styles de classes */
+.logo {
+    display: block;
+    border: 2px solid red;
+    padding: 3px 6px;
+    font-size: 2.5rem;
+    color: red;
+}
+.survol:hover {
+    color: rgb(167, 0, 0);
+}
+.grid {
+    display: grid;
+    grid-row: 3;
+    gap: 10px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    grid-column: 3 / span 2;
+    grid-row: 1 / span 2;
+}
