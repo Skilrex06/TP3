@@ -12,25 +12,68 @@
 <body>
     <header>
         <div class="container">
-            <nav>
-                <a href="index.html" class="survol"><img src="img/equigest-logo-pale.png" alt="Logo EquiGuest"></a>
+            <nav class="flex-cotes noir-blanc">
+                <a href="index.html"><img src="img/equigest-logo-pale.png" alt="Logo EquiGuest"></a>
                 <ul>
                     <li><a href="employes.html" class="survol">Employés</a></li>
                     <li><a href="creer-un-employe.html" class="survol">Créer un employé</a></li>
                     <li><a href="mon-compte.html" class="survol">Mon compte</a></li>
+                    <li><a href="#" class="menu-deroulant"><img src="img/menu-mobile.svg" alt="Menu-mobile"></a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
-        <div class="container">
-
+        <div class="container employes">
+            <div class="flex-cotes">
+                <h1>Employés</h1>
+                <form action="#" class="frm-recherche">
+                    <input type="text" id="recherche" name="recherche" placeholder="Nom d'employé, équipe, poste...">
+                    <input type="submit" value="Chercher" class="noir-blanc">
+                </form>
+            </div>
+            <h2 class="noir-blanc">Équipe de Jan Chackie</h2>
+            <section class="grid-employes">
+                <div>
+                    <img src="img/employe1.jpg" alt="Employé 1">
+                    <p>Directrice générale</p>
+                    <h3>LEMIEUX - Catherine</h3>
+                    <a href="fiche-employe.html" class="noir-blanc">Voir la fiche</a>
+                </div>
+                <div>
+                    <img src="img/employe2.jpg" alt="Employé 2">
+                    <p>Programmeur en C#</p>
+                    <h3>HAMAD - Moh</h3>
+                    <a href="fiche-employe.html" class="noir-blanc">Voir la fiche</a>
+                </div>
+                <div>
+                    <img src="img/employe3.jpg" alt="Employé 3">
+                    <p>Responsable de l'organisation graphique</p>
+                    <h3>CÔTÉ - TRISTAN</h3>
+                    <a href="fiche-employe.html" class="noir-blanc">Voir la fiche</a>
+                </div>
+            </section>
+            <h2 class="noir-blanc">Équipe de Sholmes Herlock</h2>
+            <section class="grid-employes grid-employes-equipe-2">
+                <div>
+                    <img src="img/employe4.jpg" alt="Employé 4">
+                    <p>Cheffe du service à la clientèle</p>
+                    <h3>DROLET - Christine</h3>
+                    <a href="fiche-employe.html" class="noir-blanc">Voir la fiche</a>
+                </div>
+                <div>
+                    <img src="img/employe5.jpg" alt="Employé 5">
+                    <p>Gérante des opérations</p>
+                    <h3>LACHANCE - Crystal</h3>
+                    <a href="fiche-employe.html" class="noir-blanc">Voir la fiche</a>
+                </div>
+            </section>
         </div>
     </main>
     <footer>
         <div class="couleur-fond">
             <div class="container">
-                <nav>
+                <nav class="flex-cotes noir-blanc">
                     <p><strong>EquiGest</strong> : 1660 Boul. de l'Entente, Québec</p>
                     <address><a href="tel:418-123-4567">418-123-4567</a></address>
                 </nav>

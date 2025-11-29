@@ -27,6 +27,22 @@ a {
     text-decoration: none;
 }
 
+.noir-blanc {
+    background-color: rgb(20, 20, 20);
+    color: white;
+
+    a {
+        color: white
+    }
+
+    ;
+
+    address a {
+        color: white;
+    }
+
+}
+
 /* Mise en page (positionnement)
 ========================================================================== */
 .grid-index {
@@ -74,8 +90,6 @@ a {
             }
 
             input[type="submit"] {
-                background-color: black;
-                color: white;
                 font-size: 1rem;
                 margin: 15px 0 0;
                 padding: 8px 20px;
@@ -84,11 +98,102 @@ a {
     }
 }
 
-@media screen and (min-width:790px) and (max-width:1200px)
-{
+.employes {
+    h1 {
+        margin: 35px 0;
+        font-weight: 200;
+    }
+    h2 {
+        margin: 0;
+        padding: 16px 20px;
+        font-weight: 500;
+        font-size: 2.2rem;
+    }
+    form {
+        display: flex;
+        flex-direction: row;
+        width: 45%;
+
+        #recherche {
+            padding: 0 20px;
+            font-style: italic;
+            width: 100%;
+            height: 60px;
+        }
+
+        input[type="submit"] {
+            padding: 0 15px;
+        }
+    }
+}
+
+.grid-employes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px;
+    text-align: center;
+    div {margin: 30px 0 100px;}
+    img {width: 100%;}
+    p {margin: 10px 0;}
+    a {padding: 12px 30px;}
+    h3 {
+        margin: 0 0 20px;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+}
+
+.flex-cotes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    address {
+        margin: 12px 0;
+        padding: 8px 15px;
+        font-size: 1.2rem;
+        font-weight: 800;
+        justify-items: center;
+        align-content: center;
+
+        a {
+            padding: 8px 15px;
+            font-weight: normal;
+            background-color: white;
+            color: black;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: block;
+    border: 2px solid red;
+    padding: 3px 6px;
+    font-size: 2.5rem;
+    color: red;
+}
+
+.survol:hover {
+    color: rgb(167, 0, 0);
+}
+
+
+@media screen and (min-width:790px) and (max-width:1200px) {
     .grid-index {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+
         img {
             max-width: 100%;
         }
@@ -101,6 +206,7 @@ a {
         section {
             grid-row: 2 / span 1;
             grid-column: 1 / span 1;
+
             form {
                 h2 {
                     font-size: 2.3rem;
@@ -124,10 +230,33 @@ a {
             }
         }
     }
+    .grid-employes {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 10px;
+        p {margin: 5px 0;}
+        a {padding: 8px 30px;}
+        div {margin: 30px 0 60px;}
+        h3 {
+            margin: 0 0 15px;
+            font-size: 1.4rem;
+            font-weight: 200;
+        }
+    }
+    .grid-employes-equipe-2 {grid-template-rows: 1fr;}
+    .employes {
+        h1 {margin: 20px 0;}
+        h2 {font-size: 1.8rem;}
+        form {
+            #recherche {
+                padding: 0 10px;
+                height: 45px;
+            }
+        }
+    }
 }
 
-@media screen and (min-width:530px) and (max-width:790px)
-{
+@media screen and (min-width:530px) and (max-width:790px) {
     .grid-index {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -168,26 +297,25 @@ a {
             }
         }
     }
+    .employes {
+        h1 {margin: 15px 0;}
+        h2 {font-size: 1.4rem;}
+        form {
+            #recherche {
+                padding: 0 5px;
+                height: 30px;
+            }
+        }
+    }
+    .grid-employes {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 0;
+        div {margin: 20px 0;}
+        img {width: 80%;}
+    }
+    .grid-employes-equipe-2 {grid-template-rows: 1fr 1fr}
 }
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.logo {
-    display: block;
-    border: 2px solid red;
-    padding: 3px 6px;
-    font-size: 2.5rem;
-    color: red;
-}
-
-.survol:hover {
-    color: rgb(167, 0, 0);
-}
-
 
 /* Header / Navigations / Footer 
 ========================================================================== */
@@ -195,7 +323,10 @@ a {
 header {
     background-color: rgb(20, 20, 20);
     padding: 5px 0;
-    .menu-deroulant {display: none;}
+
+    .menu-deroulant {
+        display: none;
+    }
 
     img {
         width: 50%;
@@ -211,7 +342,6 @@ header {
         a {
             margin: 0.2rem 1rem;
             font-size: 1.5rem;
-            color: white;
         }
     }
 
@@ -222,35 +352,14 @@ footer {
     padding-bottom: 1px;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    address {
-        margin: 12px 0;
-        padding: 8px 15px;
-        font-size: 1.2rem;
-        font-weight: 800;
-        justify-items: center;
-        align-content: center;
-        background-color: white;
-
-        a {
-            color: black;
-        }
-    }
-
-    p {
-        margin: 0;
-        color: white;
-    }
-}
-
-@media screen and (min-width:790px) and (max-width:1200px)
-{
+@media screen and (min-width:790px) and (max-width:1200px) {
     header {
-        .menu-deroulant {display: none;}
+        padding: 5px 0;
+
+        .menu-deroulant {
+            display: none;
+        }
+
         nav a {
             width: 30%;
             margin: auto 0;
@@ -260,7 +369,7 @@ nav {
             width: 100%;
         }
 
-        padding: 5px 0;
+
 
         nav {
             ul {
@@ -275,7 +384,10 @@ nav {
     }
 
     footer {
-        address {margin: 6px 0;}
+        address {
+            margin: 6px 0;
+        }
+
         p {
             margin: 4px 0;
             padding: 3px 10px;
@@ -284,25 +396,34 @@ nav {
         }
     }
 }
-@media screen and (min-width:530px) and (max-width:790px)
-{
+
+@media screen and (min-width:530px) and (max-width:790px) {
     header {
         nav ul {
             margin: 0 0;
-            a {display: none;}
+
+            a {
+                display: none;
+            }
         }
+
         .menu-deroulant {
             display: block;
             width: 100%;
         }
     }
+
     footer {
-        .couleur-fond {padding: 15px 0;}
+        .couleur-fond {
+            padding: 15px 0;
+        }
+
         address {
-            margin: 0; 
+            margin: 0;
             font-size: 0.8rem;
             padding: 4px 5px;
         }
+
         font-size: 0.7rem;
     }
 }
@@ -319,3 +440,9 @@ nav {
 
 /* Règles spécifiques aux pages
 ========================================================================== */
+
+@media print {
+
+    header, footer, .frm-recherche {display: none;}
+    .flex-cotes form {background-color: rgb(78, 78, 78);}
+}
