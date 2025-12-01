@@ -2,17 +2,17 @@
 <html lang="fr">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gabarit de site web</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiGest - Accueil</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <nav class="flex-cotes noir-blanc">
+        <div class="container noir-blanc">
+            <nav class="flex-cotes">
                 <a href="index.html"><img src="img/equigest-logo-pale.png" alt="Logo EquiGuest"></a>
                 <ul>
                     <li><a href="employes.html" class="survol">Employés</a></li>
@@ -24,8 +24,52 @@
         </div>
     </header>
     <main>
-        <div class="container">
+        <div class="container fiche">
+            <h1>LEPAPE - Kevin</h1>
+            <h2 class="noir-blanc">Informations</h2>
+            <section class="flex-cotes">
+                <img src="img/moi.jpg" alt="Catherine Lemieux">
+                <div class="fiche-infos fond-gris">
+                    <h3>Contact</h3>
+                    <div class="flex-cotes">
+                        <h4>Téléphone (Travail)</h4>
+                        <address>
+                            <a href="tel:418-555-1234">418-555-1234</a>
+                        </address>
+                    </div>
+                    <div class="flex-cotes">
+                        <h4>Téléphone (Personnel)</h4>
+                        <address>
+                            <a href="tel:418-555-5678">418-555-5678</a>
+                        </address>
+                    </div>
+                    <div class="flex-cotes">
+                        <h4>Courriel</h4>
+                        <address>
+                            <a href="mailto:catherine.lemieux@gmail.com">catherine.lemieux@gmail.com</a>
+                        </address>
+                    </div>
+                    <div class="marge">
+                        <a href="#" class="noir-blanc btn">Voir plus d'informations</a>
+                    </div>
+                </div>
+            </section>
+            <h2 class="noir-blanc">Gestion des paies</h2>
+            <section class="flex-cotes">
+                <div class="fiche-operations fond-gris">
+                    <h3>Opérations</h3>
+                    <a href="#" class="noir-blanc btn">Créer une paie</a>
+                    <a href="#" class="noir-blanc btn">Modifier une paie</a>
+                    <a href="#" class="noir-blanc btn">Générer les feuillets fiscaux</a>
+                </div>
+                <div class="fiche-paies fond-gris">
+                    <h3>Dernières paies</h3>
+                    <table>
 
+                    </table>
+                    <a href="#" class="noir-blanc btn">Voir toutes les paies</a>
+                </div>
+            </section>
         </div>
     </main>
     <footer>
@@ -33,12 +77,14 @@
             <div class="container">
                 <nav class="flex-cotes noir-blanc">
                     <p><strong>EquiGest</strong> : 1660 Boul. de l'Entente, Québec</p>
-                    <address><a href="tel:418-123-4567">418-123-4567</a></address>
+                    <address>
+                        <a href="tel:418-123-4567">418-123-4567</a>
+                    </address>
                 </nav>
             </div>
         </div>
         <div class="container">
-            <p>Site réalisé par : <strong>Nicolas Audet</strong> | Dans le cadre du programme 
+            <p>Site réalisé par : <strong>Nicolas Audet</strong> | Dans le cadre du programme
                 Technique de l'informatique - Cégep Garneau</p>
         </div>
     </footer>

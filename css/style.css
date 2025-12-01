@@ -4,6 +4,7 @@ employé 2 : "https://www.istockphoto.com/photo/portrait-of-businessman-pride-an
 employé 3 : "https://www.istockphoto.com/photo/portrait-of-young-businessman-business-concept-black-background-gm2152846091-573820520"
 employé 4 : "https://www.istockphoto.com/photo/woman-doctor-in-medical-mask-on-blue-background-profile-portrait-coronavirus-gm1238596860-362502266"
 employé 5 : "https://www.istockphoto.com/photo/full-length-20s-young-asian-woman-teacher-student-lawyer-wear-blazer-skirt-looking-gm1399684854-453483765"
+moi : "https://i.pravatar.cc/150?img=70"
 */
 * {
     box-sizing: border-box;
@@ -33,12 +34,6 @@ a {
 
     a {
         color: white
-    }
-
-    ;
-
-    address a {
-        color: white;
     }
 
 }
@@ -73,7 +68,7 @@ a {
         height: 100%;
         grid-row: 2 / span 2;
         grid-column: 1 / span 2;
-        background-color: rgb(204, 204, 204);
+        background-color: rgb(203, 203, 203);
 
         form {
             h2 {
@@ -134,7 +129,6 @@ a {
 .grid-employes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
     gap: 15px;
     text-align: center;
     div {margin: 30px 0 100px;}
@@ -149,11 +143,33 @@ a {
 }
 
 .fiche {
-    img {max-width: 33%;}
-    .fiche-operations {width: 33%;}
-    .fiche-paies {width: 66%;}
+    h2 {
+        margin: 12px 0;
+        padding: 8px 20px;
+    }
+    section {
+        margin: 30px 0;
+        align-items: flex-start;
+    }
+    address a {font-style: normal;}
+    img {width: 33%;}
+    h3 {margin: 15px 0; font-size: 1.6rem;}
+    h4 {margin: 5px 0;}
     .fiche-infos {
         margin: 0 0 0 15px;
+        padding: 0 20px 10px;
+        width: 66%;
+        .flex-cotes {
+            border-bottom: 3px solid rgb(154, 154, 154);
+            padding: 5px 0;
+        }
+    }
+    .fiche-operations {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+    }
+    .fiche-paies {
         width: 66%;
     }
 }
@@ -163,30 +179,9 @@ a {
     justify-content: space-between;
     align-items: center;
 
-    address {
-        margin: 12px 0;
-        padding: 8px 15px;
-        font-size: 1.2rem;
-        font-weight: 800;
-        justify-items: center;
-        align-content: center;
-
-        a {
-            padding: 8px 15px;
-            font-weight: normal;
-            background-color: white;
-            color: black;
-        }
-    }
-
     p {
         margin: 0;
     }
-}
-
-.flex-vertical {
-    display: flex;
-    flex-direction: column;
 }
 
 .container {
@@ -207,6 +202,12 @@ a {
     color: rgb(167, 0, 0);
 }
 
+.btn {
+    margin: 10px 0;
+    padding: 8px 12px;
+}
+
+.marge {margin: 20px 0;}
 
 @media screen and (min-width:790px) and (max-width:1200px) {
     .grid-index {
@@ -369,7 +370,23 @@ header {
 footer {
     text-align: center;
     padding-bottom: 1px;
+    address {
+        margin: 12px 0;
+        padding: 8px 15px;
+        font-size: 1.2rem;
+        font-weight: 800;
+        justify-items: center;
+        align-content: center;
+
+        a {
+            padding: 8px 15px;
+            font-weight: normal;
+            background-color: white;
+            color: black !important;
+        }
+    }
 }
+
 
 @media screen and (min-width:790px) and (max-width:1200px) {
     header {
