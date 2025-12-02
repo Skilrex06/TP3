@@ -18,6 +18,10 @@ moi : "https://i.pravatar.cc/150?img=70"
     padding: 15px 0;
 }
 
+.fond-gris {
+    background-color: rgb(203, 203, 203);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -38,12 +42,21 @@ a {
 
 }
 
-.fond-gris {
-    background-color: rgb(203, 203, 203);
+h1 {
+    margin: 35px 0;
+    font-weight: 200;
+}
+
+.bande-noire-titre {
+    margin: 0;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 2.2rem;
 }
 
 /* Mise en page (positionnement)
 ========================================================================== */
+
 .grid-index {
     margin: 15px 0;
     display: grid;
@@ -68,7 +81,6 @@ a {
         height: 100%;
         grid-row: 2 / span 2;
         grid-column: 1 / span 2;
-        background-color: rgb(203, 203, 203);
 
         form {
             h2 {
@@ -97,32 +109,20 @@ a {
     }
 }
 
-.employes {
-    h1 {
-        margin: 35px 0;
-        font-weight: 200;
-    }
-    h2 {
-        margin: 0;
-        padding: 16px 20px;
-        font-weight: 500;
-        font-size: 2.2rem;
-    }
-    form {
-        display: flex;
-        flex-direction: row;
-        width: 45%;
+.employes form {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
 
-        #recherche {
-            padding: 0 20px;
-            font-style: italic;
-            width: 100%;
-            height: 60px;
-        }
+    #recherche {
+        padding: 0 20px;
+        font-style: italic;
+        width: 100%;
+        height: 60px;
+    }
 
-        input[type="submit"] {
-            padding: 0 15px;
-        }
+    input[type="submit"] {
+        padding: 0 15px;
     }
 }
 
@@ -131,10 +131,23 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     text-align: center;
-    div {margin: 30px 0 100px;}
-    img {width: 100%;}
-    p {margin: 10px 0;}
-    a {padding: 12px 30px;}
+
+    div {
+        margin: 30px 0 100px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    p {
+        margin: 10px 0;
+    }
+
+    a {
+        padding: 12px 30px;
+    }
+
     h3 {
         margin: 0 0 20px;
         font-size: 1.6rem;
@@ -147,30 +160,76 @@ a {
         margin: 12px 0;
         padding: 8px 20px;
     }
+
     section {
         margin: 30px 0;
         align-items: flex-start;
     }
-    address a {font-style: normal;}
-    img {width: 33%;}
-    h3 {margin: 15px 0; font-size: 1.6rem;}
-    h4 {margin: 5px 0;}
+
+    address a {
+        font-style: normal;
+    }
+
+    img {
+        width: 33%;
+    }
+
+    h3 {
+        margin: 15px 0;
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        margin: 5px 0;
+    }
+
     .fiche-infos {
         margin: 0 0 0 15px;
         padding: 0 20px 10px;
         width: 66%;
+
         .flex-cotes {
             border-bottom: 3px solid rgb(154, 154, 154);
             padding: 5px 0;
         }
     }
+
     .fiche-operations {
         width: 33%;
-        display: flex;
-        flex-direction: column;
+
+        div {
+            padding: 20px;
+        }
+
+        div a {
+            display: inline-block;
+        }
     }
+
     .fiche-paies {
         width: 66%;
+
+        div {
+            margin: 30px;
+
+            table {
+                border-collapse: collapse;
+                width: 100%;
+                margin: 20px 0 40px 0;
+            }
+
+            th {
+                border: 3px solid black;
+                padding: 10px;
+                background-color: rgb(224, 224, 224);
+            }
+
+            td {
+                border: 2px solid black;
+                background-color: white;
+                text-align: center;
+            }
+        }
     }
 }
 
@@ -203,13 +262,15 @@ a {
 }
 
 .btn {
-    margin: 10px 0;
-    padding: 8px 12px;
+    margin: 10px 30px 10px 0;
+    padding: 12px 20px;
 }
 
-.marge {margin: 20px 0;}
+.marge {
+    margin: 20px 0;
+}
 
-@media screen and (min-width:790px) and (max-width:1200px) {
+@media screen and (min-width:960px) and (max-width:1200px) {
     .grid-index {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -250,23 +311,44 @@ a {
             }
         }
     }
+
     .grid-employes {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         gap: 10px;
-        p {margin: 5px 0;}
-        a {padding: 8px 30px;}
-        div {margin: 30px 0 60px;}
+
+        p {
+            margin: 5px 0;
+        }
+
+        a {
+            padding: 8px 30px;
+        }
+
+        div {
+            margin: 30px 0 60px;
+        }
+
         h3 {
             margin: 0 0 15px;
             font-size: 1.4rem;
             font-weight: 200;
         }
     }
-    .grid-employes-equipe-2 {grid-template-rows: 1fr;}
+
+    .grid-employes-equipe-2 {
+        grid-template-rows: 1fr;
+    }
+
     .employes {
-        h1 {margin: 20px 0;}
-        h2 {font-size: 1.8rem;}
+        h1 {
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
         form {
             #recherche {
                 padding: 0 10px;
@@ -274,9 +356,22 @@ a {
             }
         }
     }
+
+    .fiche {
+        h3 {
+            margin: 8px 0;
+        }
+        th, td {font-size: 1rem;}
+    }
+
+    .btn {
+        padding: 6px 10px;
+        margin: 6px 0;
+        font-size: 1.1rem;
+    }
 }
 
-@media screen and (min-width:530px) and (max-width:790px) {
+@media screen and (min-width:600px) and (max-width:960px) {
     .grid-index {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -317,9 +412,16 @@ a {
             }
         }
     }
+
     .employes {
-        h1 {margin: 15px 0;}
-        h2 {font-size: 1.4rem;}
+        h1 {
+            margin: 15px 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+        }
+
         form {
             #recherche {
                 padding: 0 5px;
@@ -327,14 +429,166 @@ a {
             }
         }
     }
+
     .grid-employes {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 0;
-        div {margin: 20px 0;}
-        img {width: 80%;}
+
+        div {
+            margin: 20px 0;
+        }
+
+        img {
+            width: 80%;
+        }
     }
-    .grid-employes-equipe-2 {grid-template-rows: 1fr 1fr}
+
+    .grid-employes-equipe-2 {
+        grid-template-rows: 1fr 1fr
+    }
+
+    .fiche {
+        h1 {margin: 15px 0;}
+        h3 {
+            margin: 4px 0;
+        }
+        h4 {font-size: 1.1rem;}
+        address a {font-size: 1rem;}
+        th, td {font-size: 0.8rem;}
+        table {
+            margin: 5px 0;
+            overflow-x: auto;
+        }
+    }
+    .btn {
+        padding: 6px 10px;
+        margin: 6px 0;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .grid-index {
+        grid-template-columns: 1fr;
+        width: 80%;
+        margin: 0 auto;
+
+        img {
+            max-width: 100%;
+        }
+
+        .item1 {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 1;
+        }
+
+        section {
+            height: 50%;
+            grid-row: 1 / span 1;
+            grid-column: 1 / span 1;
+
+            form {
+                h2 {
+                    font-size: 1.8rem;
+                    margin: 10px 0 3px;
+                }
+
+                div {
+                    margin: 0 0 10px;
+                    font-size: 1.1rem;
+                }
+
+                input[type="text"] {
+                    height: 100%;
+                    max-width: 80%;
+                }
+
+                input[type="submit"] {
+                    margin: 5px 0 0;
+                    padding: 4px 10px;
+                }
+            }
+        }
+    }
+
+    .grid-employes {
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+        p {
+            margin: 5px 0;
+        }
+
+        a {
+            padding: 8px 30px;
+        }
+
+        div {
+            margin: 15px 0 40px;
+        }
+
+        h3 {
+            margin: 0 0 15px;
+            font-size: 1.3rem;
+            font-weight: 150;
+        }
+    }
+
+    .grid-employes-equipe-2 {
+        grid-template-rows: 1fr;
+    }
+
+    .employes {
+        h1 {
+            font-size: 1.8rem;
+            margin: 20px 0;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            padding: 3px 10px;
+        }
+
+        form {
+            #recherche {
+                padding: 0 10px;
+                height: 30px;
+            }
+
+            input[type="submit"] {
+                font-size: 1rem;
+                padding: 4px 3px;
+            }
+        }
+    }
+    .fiche {
+        h1 {
+            margin: 15px 0;
+            font-size: 1.6rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+        }
+        h3 {
+            margin: 4px 0;
+        }
+        img {
+            width: 50%;
+        }
+        h4 {font-size: 1.1rem;}
+        address a {font-size: 1rem;}
+        th, td {font-size: 0.8rem;}
+        table {
+            margin: 5px 0;
+            overflow-x: auto;
+        }
+    }
+    .btn {
+        padding: 6px 10px;
+        margin: 6px 0;
+        font-size: 0.8rem;
+    }
 }
 
 /* Header / Navigations / Footer 
@@ -370,6 +624,7 @@ header {
 footer {
     text-align: center;
     padding-bottom: 1px;
+
     address {
         margin: 12px 0;
         padding: 8px 15px;
@@ -388,7 +643,7 @@ footer {
 }
 
 
-@media screen and (min-width:790px) and (max-width:1200px) {
+@media screen and (min-width:960px) and (max-width:1200px) {
     header {
         padding: 5px 0;
 
@@ -404,8 +659,6 @@ footer {
         img {
             width: 100%;
         }
-
-
 
         nav {
             ul {
@@ -433,7 +686,38 @@ footer {
     }
 }
 
-@media screen and (min-width:530px) and (max-width:790px) {
+@media screen and (min-width:600px) and (max-width:960px) {
+    header {
+        nav ul {
+            margin: 0 0;
+
+            a {
+                display: none;
+            }
+        }
+
+        .menu-deroulant {
+            display: block;
+            width: 100%;
+        }
+    }
+
+    footer {
+        .couleur-fond {
+            padding: 15px 0;
+        }
+
+        address {
+            margin: 0;
+            font-size: 0.8rem;
+            padding: 4px 5px;
+        }
+
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width:600px) {
     header {
         nav ul {
             margin: 0 0;
@@ -479,6 +763,13 @@ footer {
 
 @media print {
 
-    header, footer, .frm-recherche {display: none;}
-    .flex-cotes form {background-color: rgb(78, 78, 78);}
+    header,
+    footer,
+    .frm-recherche {
+        display: none;
+    }
+
+    .noir-blanc {
+        background-color: gray;
+    }
 }
