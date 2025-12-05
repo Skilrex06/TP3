@@ -2,11 +2,11 @@
 <html lang="fr">
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Gabarit de site web</title>
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabarit de site web</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,7 +25,70 @@
     </header>
     <main>
         <div class="container">
-            
+            <h1>Créer un employé</h1>
+            <section>
+                <form action="https://nrichardgarneau.pythonanywhere.com/" class="frm-creation">
+                    <fieldset>
+                        <legend>Coordonnées</legend>
+                        <div>
+                            <label for="txt-prenom">Prénom de l'employé :</label>
+                            <input type="text" name="txt-prenom" id="txt-prenom" placeholder="John" required>
+                        </div>
+                        <div>
+                            <label for="txt-nom">Nom de l'employé :</label>
+                            <input type="text" name="txt-nom" id="txt-nom" placeholder="Doe" required>
+                        </div>    
+                        <div>
+                            <label for="txt-adresse-courriel">Adresse courriel :</label>
+                            <input type="text" name="txt-adresse-courriel" id="txt-adresse-courriel"
+                                placeholder="johndoe@gmail.com" required>
+                        </div>
+                        <fieldset>
+                            <legend>Moyen de communication préféré :</legend>
+                            <div>
+                                <input type="radio" name="rdo-communication" id="communication-telephone" value="telephone">
+                                <label for="communication-telephone">Téléphone</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rdo-communication" id="communication-texto" value="texto">
+                                <label for="communication-texto">Texto</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="rdo-communication" id="communication-courriel" value="courriel">
+                                <label for="communication-courriel">Courriel</label>
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Emploi</legend>
+                        <div>
+                            <label for="txt-date-embauche">Date d'embauche :</label>
+                            <input type="date" name="date-embauche" id="date-embauche" required>
+                        </div>
+                        <div>
+                            <label for="sel-type-emploi">Type d'emploi :</label>
+                            <select name="sel-type-emploi" id="sel-type-emploi" required>
+                                <option value="Direction">Direction</option>
+                                <option value="Administration">Administration</option>
+                                <option value="Marketing">Marketing</option>
+                                <option value=" Ressources humaines">Ressources humaines</option>
+                                <option value="Gestion de projet">Gestion de projet</option>
+                                <option value="Vente">Vente</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Manutention">Manutention</option>
+                                <option value="Informatique">Informatique</option>
+                                <option value="Design">Design</option>
+                                <option value="Ingénierie">Ingénierie</option>
+                                <option value="Journalier">Journalier</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="txt-commentaire">Commentaires sur l'employé :</label>
+                            <input type="text" name="txt-commentaire" id="txt-commentaire" maxlength="400">
+                        </div>
+                    </fieldset>
+                </form>
+            </section>
         </div>
     </main>
     <footer>
@@ -38,7 +101,7 @@
             </div>
         </div>
         <div class="container">
-            <p>Site réalisé par : <strong>Nicolas Audet</strong> | Dans le cadre du programme 
+            <p>Site réalisé par : <strong>Nicolas Audet</strong> | Dans le cadre du programme
                 Technique de l'informatique - Cégep Garneau</p>
         </div>
     </footer>
