@@ -43,7 +43,7 @@
                             <input type="text" name="txt-adresse-courriel" id="txt-adresse-courriel"
                                 placeholder="johndoe@gmail.com" required>
                         </div>
-                        <fieldset>
+                        <fieldset class="frm-communication">
                             <legend>Moyen de communication préféré :</legend>
                             <div>
                                 <input type="radio" name="rdo-communication" id="communication-telephone" value="telephone">
@@ -83,10 +83,17 @@
                             </select>
                         </div>
                         <div>
-                            <label for="txt-commentaire">Commentaires sur l'employé :</label>
-                            <input type="text" name="txt-commentaire" id="txt-commentaire" maxlength="400">
+                            <label for="txt-situation-employe">Est-ce que l'employé est en arrêt de travail ?</label>
+                            <input type="checkbox" name="txt-situation-employe" id="txt-situation-employe">
                         </div>
+                        <fieldset class="fds-commentaires">
+                            <legend>Commentaires sur l'employé :</legend>
+                            <textarea name="txt-commentaires" id="txt-commentaires"></textarea>
+                        </fieldset>
                     </fieldset>
+                    <div class="bouton-envoi">
+                        <input type="submit" value="Ajouter à l'équipe">
+                    </div>
                 </form>
             </section>
         </div>

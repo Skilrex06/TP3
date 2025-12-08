@@ -124,6 +124,9 @@ h1 {
     input[type="submit"] {
         padding: 0 15px;
     }
+    input[type="submit"]:hover {
+        background-color: rgb(70, 70, 70);
+    }
 }
 
 .grid-employes {
@@ -147,6 +150,9 @@ h1 {
     a {
         padding: 12px 30px;
     }
+    a:hover {
+        background-color: rgb(70, 70, 70);
+    }
 
     h3 {
         margin: 0 0 20px;
@@ -168,6 +174,9 @@ h1 {
 
     address a {
         font-style: normal;
+    }
+    a:hover{
+        text-decoration: underline;
     }
 
     img {
@@ -229,6 +238,53 @@ h1 {
                 background-color: white;
                 text-align: center;
             }
+        }
+    }
+}
+
+.frm-creation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border: 10px solid rgb(255, 0, 0);
+    background-color: rgb(125, 0, 0);
+    color: white;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    fieldset {
+        text-align: right;
+        display: inline-block;
+        margin: 20px 0;
+        fieldset {
+            text-align: left;
+        }
+    }
+    input[type="text"], input[type="date"], select {
+        margin: 10px 0;
+        padding: 5px 0 5px 10px;
+        width: 45%;
+    }
+    .fds-commentaires {
+        width: 100%;
+        height: 50%;
+        #txt-commentaires {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .bouton-envoi {
+        width: 100%;
+        margin: 20px auto;
+        text-align: center;
+        input[type="submit"] {
+            padding: 10px 20px;
+            border: 3px solid white;
+            background-color: red;
+            color: white;
+        }
+        input[type="submit"]:hover {
+            background-color: rgb(170, 0, 0);
         }
     }
 }
@@ -356,6 +412,17 @@ h1 {
             }
         }
     }
+    .frm-creation {
+        padding: 10px;
+        font-size: 1.2rem;
+        fieldset {
+            width: 100%;
+            margin: 10px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 70%;
+        }
+    }
 
     .fiche {
         h3 {
@@ -446,6 +513,17 @@ h1 {
 
     .grid-employes-equipe-2 {
         grid-template-rows: 1fr 1fr
+    }
+
+    .frm-creation {
+        font-size: 1rem;
+        fieldset {
+            width: 100%;
+            margin: 10px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 70%;
+        }
     }
 
     .fiche {
@@ -562,6 +640,18 @@ h1 {
             }
         }
     }
+    .frm-creation {
+        padding: 5px;
+        font-size: 1.1rem;
+        text-align: left;
+        fieldset {
+            width: 100%;
+            margin: 10px;
+        }
+        input[type="text"], input[type="date"], select {
+            width: 70%;
+        }
+    }
     .fiche {
         h1 {
             margin: 15px 0;
@@ -638,6 +728,10 @@ footer {
             font-weight: normal;
             background-color: white;
             color: black !important;
+        }
+        
+        a:hover {
+            text-decoration: underline;
         }
     }
 }
